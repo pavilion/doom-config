@@ -1,5 +1,5 @@
 # name : expect(...)
-# key: expect
+# key: exp
 # --
 
-exp($1)$0
+expect($1)$0
