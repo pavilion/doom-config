@@ -2,4 +2,4 @@
 # name: toMatchSnapshot
 # key: tms
 # --
-toMatchSnapshot
+toMatchSnapshot()
