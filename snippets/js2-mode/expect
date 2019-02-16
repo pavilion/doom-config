@@ -1,0 +1,5 @@
+# name : expect(...)
+# key: expect
+# --
+
+exp($1)$0
