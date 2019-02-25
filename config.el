@@ -47,7 +47,7 @@
 
 (setq doom-theme 'doom-tomorrow-night)
 
-(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 12)
+(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 13)
       doom-variable-pitch-font (font-spec :family "DejaVu Sans Mono")
       doom-unicode-font (font-spec :family "DejaVu Sans Mono")
-      doom-big-font (font-spec :family "DejaVu Sans Mono" :size 12))
+      doom-big-font (font-spec :family "DejaVu Sans Mono" :size 13))
