@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: shallow
+# key: sh
+# --
+shallow(<$1 />)$0
