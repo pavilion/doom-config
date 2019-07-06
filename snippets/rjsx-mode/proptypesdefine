@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Define proptypes
+# key: Pd
+# --
+$1.propTypes = {
+  $0
+};

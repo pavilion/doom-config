@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Proptypes.string
+# key: Ps
+# --
+PropTypes.string

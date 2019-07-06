@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Proptypes boolean required
+# key: pbr
+# --
+PropTypes.bool.isRequired

@@ -47,8 +47,16 @@
 
 (setq doom-theme 'doom-tomorrow-night)
 
-(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 13))
+(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 12))
 (setq display-line-numbers-type 'relative)
 
 (setq org-agenda-files (list "~/org/work.org"
                              "~/org/life.org"))
+
+(after! lsp-ui
+  (setq lsp-ui-sideline-enable nil))
+
+(after! lsp-mode
+  (dap-mode 1)
+  (dap-ui-mode 1)
+  (after! lsp-java (require 'dap-java)))

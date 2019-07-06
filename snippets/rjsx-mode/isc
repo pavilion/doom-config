@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: import connect
+# key: ic
+# --
+
+import { connect } from 'react-redux';

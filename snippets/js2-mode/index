@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: index
+# key: index     
+# --
+import $1 from './$1';
+
+export default $1;

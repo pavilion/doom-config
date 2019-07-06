@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Proptypes arrayOf required
+# key: par
+# --
+PropTypes.arrayOf($0).isRequired;

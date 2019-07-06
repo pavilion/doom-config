@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Proptypes objectOf required
+# key: poor
+# --
+PropTypes.objectOf($0).isRequired
