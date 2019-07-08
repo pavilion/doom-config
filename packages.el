@@ -12,3 +12,7 @@
 
 (package! openapi-yaml-mode :recipe (:fetcher github :repo "magoyette/openapi-yaml-mode"))
 (package! dap-mode)
+
+
+;; in ~/.doom.d/packages.el
+(package! doom-themes :recipe (:fetcher github :repo "hlissner/emacs-doom-themes" :files ("*.el" "themes/*.el")))
