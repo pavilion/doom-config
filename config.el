@@ -53,10 +53,6 @@
 (setq org-agenda-files (list "~/org/work.org"
                              "~/org/life.org"))
 
-(after! lsp-ui
-(setq lsp-java-jdt-download-url "http://download.eclipse.org/jdtls/milestones/0.40.0/jdt-language-server-0.40.0-201906040221.tar.gz")
-  (setq lsp-ui-sideline-enable nil))
-
 (after! lsp-mode
   (dap-mode 1)
   (dap-ui-mode 1)
