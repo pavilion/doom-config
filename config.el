@@ -23,6 +23,9 @@
      :desc "Next buffer (Spacemacs)" :n "n" #'next-buffer
      :desc "Buffer delete" :n "e" #'next-buffer
      :desc "Switch buffer (Spacemacs)" :n "b" #'switch-to-buffer)
+  (:prefix "i"
+      :desc "import-js-import" :n "m" #'import-js-import
+      )
    (:prefix "w"
      :desc "Vertical split (Spacemacs)" :n "/" #'evil-window-vsplit
      :desc "Horizontal split (Spacemacs)" :n "-" #'evil-window-split
