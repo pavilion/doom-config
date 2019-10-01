@@ -14,3 +14,5 @@
 
 (package! openapi-yaml-mode :recipe (:fetcher github :repo "magoyette/openapi-yaml-mode"))
 (package! dap-mode)
+
+(package! nov)

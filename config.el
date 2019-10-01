@@ -53,8 +53,22 @@
 (setq doom-font (font-spec :family "DejaVu Sans Mono" :size 12))
 (setq display-line-numbers-type 'relative)
 
-(setq org-agenda-files (list "~/org/work.org"
-                             "~/org/life.org"))
+(setq org-agenda-files (list "~/Dropbox/org/work.org"
+                             "~/Dropbox/org/life.org"))
+
+;; Epub
+(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+(defun my-nov-font-setup ()
+  (face-remap-add-relative 'variable-pitch :family "Roboto Slab" :height 180)
+  (buffer-face-mode)
+  (setq line-spacing 6)
+  (setq header-line-format " ")
+  (setq nov-text-width t)
+  (setq visual-fill-column-center-text t)
+  (visual-line-mode 1)
+  (visual-fill-column-mode 1)
+  (writeroom-mode 1))
+(add-hook! nov-mode #'my-nov-font-setup)
 
 (after! lsp-mode
   (dap-mode 1)
