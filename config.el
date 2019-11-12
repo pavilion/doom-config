@@ -73,4 +73,7 @@
 (after! lsp-mode
   (dap-mode 1)
   (dap-ui-mode 1)
-  (after! lsp-java (require 'dap-java)))
+  (after! lsp-java
+    (require 'dap-java)
+(setq dap-java-test-additional-args '("-n" "\".*(Test|IT).*\""))
+    ))

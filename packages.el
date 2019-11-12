@@ -12,7 +12,8 @@
 
 (package! emacs-snippets :disable t)
 
-(package! openapi-yaml-mode :recipe (:fetcher github :repo "magoyette/openapi-yaml-mode"))
 (package! dap-mode)
 
 (package! nov)
+
+;; (package! lsp-ui :disable t)
