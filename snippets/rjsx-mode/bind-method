@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: bind method
-# key: bind
-# --
-this.$1 = this.$1.bind(this);
