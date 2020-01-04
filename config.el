@@ -3,6 +3,9 @@
 ;; Place your private configuration here
 ;;; ~/.doom.d/spacemacs-bindings.el -*- lexical-binding: t; -*-
 
+;;//Temporary
+(fset 'battery-update #'ignore)
+
 (map!
  ;; Comma for shortcut to local-leader
  :n "," (λ! (push (cons t ?m) unread-command-events)
@@ -50,7 +53,7 @@
 
 (setq doom-theme 'doom-tomorrow-night)
 
-(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 12))
+(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 14))
 (setq display-line-numbers-type 'relative)
 
 (setq org-agenda-files (list "~/Dropbox/org/work.org"
