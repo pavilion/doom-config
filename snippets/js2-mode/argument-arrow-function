@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: argument arrow function
+# uuid:
+# key: argf
+# condition: t
+# --
+($1) => $0
