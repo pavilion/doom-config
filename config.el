@@ -45,12 +45,12 @@
      )
    ))
 
-(def-package! prettier-js
+(use-package! prettier-js
   )
 
 (setq doom-theme 'doom-tomorrow-night)
 
-(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 12))
+(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 14))
 (setq display-line-numbers-type 'relative)
 
 (setq org-agenda-files (list "~/Dropbox/org/work.org"
