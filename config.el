@@ -54,7 +54,9 @@
 (setq display-line-numbers-type 'relative)
 
 (setq org-agenda-files (list "~/Dropbox/org/work.org"
-                             "~/Dropbox/org/life.org"))
+                             "~/Dropbox/org/life.org"
+                             "~/Dropbox/org/interviews.org"
+                             ))
 
 ;; Epub
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
