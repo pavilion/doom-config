@@ -14,6 +14,7 @@
 
 (package! dap-mode)
 
+;; Reading epub
 (package! nov)
 
 ;; (package! lsp-ui :disable t)
