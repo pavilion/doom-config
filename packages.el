@@ -17,4 +17,9 @@
 ;; Reading epub
 (package! nov)
 
+;; Packages used in config.el for regular emacs you'll need `use-package` I guess
+(package! mmm-mode)
+(package! typescript-mode)
+(package! web-mode)
+(package! graphql-mode)
 ;; (package! lsp-ui :disable t)

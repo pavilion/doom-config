@@ -75,5 +75,42 @@
   (dap-ui-mode 1)
   (after! lsp-java
     (require 'dap-java)
+
 (setq dap-java-test-additional-args '("-n" "\".*(Test|IT).*\""))
     ))
+
+
+;; Assign typescript-mode to .tsx files
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
+
+;; Create submodules for multiple major modes
+(require 'mmm-auto)
+(setq mmm-global-mode 'maybe)
+(setq mmm-submode-decoration-level 0) ;; Turn off background highlight
+
+;; Add css mode for CSS in JS blocks
+(mmm-add-classes
+  '((mmm-styled-mode
+    :submode css-mode
+    :front "[a-pr-zA-PR-Z0-9]?[a-km-zA-KM-Z0-9]+`\n"
+    :back "`;")))
+
+(mmm-add-mode-ext-class 'typescript-mode nil 'mmm-styled-mode)
+
+;; Add submodule for graphql blocks
+(mmm-add-classes
+  '((mmm-graphql-mode
+    :submode graphql-mode
+    :front "gr?a?p?h?ql`\n" ;; Add additional aliases like `gql` if needed
+    :back "`;")))
+
+(mmm-add-mode-ext-class 'typescript-mode nil 'mmm-graphql-mode)
+
+;; Add JSX submodule, because typescript-mode is not that great at it
+(mmm-add-classes
+  '((mmm-jsx-mode
+    :front "\s\([\n<]"
+    :back "[\s>]\);\n"
+    :submode web-mode)))
+
+(mmm-add-mode-ext-class 'typescript-mode nil 'mmm-jsx-mode)
