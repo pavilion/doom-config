@@ -81,6 +81,8 @@
 (setq dap-java-test-additional-args '("-n" "\".*(Test|IT).*\""))
     ))
 
+(setq lsp-ui-sideline-enable nil)
+
 
 ;; Assign typescript-mode to .tsx files
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))

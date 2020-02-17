@@ -10,7 +10,7 @@
 
 (package! import-js)
 
-(package! emacs-snippets :disable t)
+(package! doom-snippets :disable t)
 
 (package! dap-mode)
 

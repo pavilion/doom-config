@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: types
+# key: rt
+# --
+type $1 = {
+  $0
+}

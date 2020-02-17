@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: react functional component
+# key: rfc
+# --
+const $1: React.FC = () => $2
