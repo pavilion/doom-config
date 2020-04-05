@@ -23,3 +23,6 @@
 (package! web-mode)
 (package! graphql-mode)
 ;; (package! lsp-ui :disable t)
+
+;; try indium
+(package! indium)

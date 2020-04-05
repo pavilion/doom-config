@@ -41,7 +41,7 @@
      :desc "Git status (Spacemacs)" :n "s" #'magit-status
      )
    (:prefix "m"
-     :desc "Git status (Spacemacs)" :n "=" #'prettier-js
+     :desc "Prettify js" :n "=" #'prettier-js
      )
    ))
 
