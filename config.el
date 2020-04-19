@@ -58,6 +58,8 @@
                              "~/Dropbox/org/interviews.org"
                              ))
 
+(setq lsp-enable-symbol-highlighting nil)
+
 ;; Epub
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
 (defun my-nov-font-setup ()
