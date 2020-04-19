@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: tikzpicture
+# key: tikzp          
+# --
+#+HEADER: :file ./img/axisWithLine.svg :imagemagick yes
+#+HEADER: :results output silent :headers '("\\usepackage{tikz}")
+#+HEADER: :fit yes :imoutoptions -geometry 400 :iminoptions -density 600
+#+BEGIN_src latex
+\begin{tikzpicture}
+\tikz \draw (-1.5, 0) -- (1.5, 0) -- (0, -1.5) -- (0, 1.5);
+\end{tikzpicture}
+#+END_src#+END_src
