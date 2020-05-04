@@ -22,3 +22,7 @@
 (package! typescript-mode)
 (package! web-mode)
 (package! graphql-mode)
+
+(package! lsp-ui :disable t)
+
+(package! wordnut)

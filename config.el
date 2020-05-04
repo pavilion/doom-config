@@ -48,17 +48,21 @@
 (use-package! prettier-js
   )
 
-(setq doom-theme 'doom-tomorrow-night)
+(setq doom-theme 'my-doom-tomorrow-night)
 
 (setq doom-font (font-spec :family "DejaVu Sans Mono" :size 14))
 (setq display-line-numbers-type 'relative)
 
 (setq org-agenda-files (list "~/Dropbox/org/work.org"
                              "~/Dropbox/org/life.org"
-                             "~/Dropbox/org/interviews.org"
                              ))
 
 (setq lsp-enable-symbol-highlighting nil)
+(setq lsp-eldoc-render-all nil)
+(setq lsp-enable-snippet nil)
+(setq lsp-signature-auto-activate nil)
+(setq lsp-ui-sideline-enable nil)
+
 
 ;; Epub
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
@@ -73,17 +77,6 @@
   (visual-fill-column-mode 1)
   (writeroom-mode 1))
 (add-hook! nov-mode #'my-nov-font-setup)
-
-(after! lsp-mode
-  (dap-mode 1)
-  (dap-ui-mode 1)
-  (after! lsp-java
-    (require 'dap-java)
-
-(setq dap-java-test-additional-args '("-n" "\".*(Test|IT).*\""))
-    ))
-
-(setq lsp-ui-sideline-enable nil)
 
 
 ;; Assign typescript-mode to .tsx files
