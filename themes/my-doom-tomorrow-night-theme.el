@@ -11,7 +11,7 @@ determine the exact padding."
   "A theme based off of Chris Kempson's Tomorrow Dark."
 
   ;; name        gui       256       16
-  ((bg         '("#0B0D0E" nil       nil          ))
+  ((bg         '("black" nil       nil          ))
    (bg-alt     '("#18191A" nil       nil          ))
    (base0      '("black"  "black"   "black"      ))
    (base1      '("#0E0E0E" "#1b1b1b"              ))

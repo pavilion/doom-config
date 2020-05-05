@@ -50,7 +50,7 @@
 
 (setq doom-theme 'my-doom-tomorrow-night)
 
-(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 14))
+(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 15))
 (setq display-line-numbers-type 'relative)
 
 (setq org-agenda-files (list "~/Dropbox/org/work.org"
@@ -76,7 +76,7 @@
   (visual-line-mode 1)
   (visual-fill-column-mode 1)
   (writeroom-mode 1))
-(add-hook! nov-mode #'my-nov-font-setup)
+ (add-hook! nov-mode #'my-nov-font-setup)
 
 
 ;; Assign typescript-mode to .tsx files
