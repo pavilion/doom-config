@@ -50,7 +50,7 @@
 
 (setq doom-theme 'my-doom-tomorrow-night)
 
-(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 15))
+(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 13))
 (setq display-line-numbers-type 'relative)
 
 (setq org-agenda-files (list "~/Dropbox/org/work.org"
