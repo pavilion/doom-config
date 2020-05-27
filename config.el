@@ -50,7 +50,7 @@
 
 (setq doom-theme 'my-doom-tomorrow-night)
 
-(setq doom-font (font-spec :family "DejaVu Sans Mono" :size 13))
+(setq doom-font (font-spec :family "Jetbrains Mono" :size 12))
 (setq display-line-numbers-type 'relative)
 
 (setq org-agenda-files (list "~/Dropbox/org/work.org"
@@ -67,7 +67,7 @@
 ;; Epub
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
 (defun my-nov-font-setup ()
-  (face-remap-add-relative 'variable-pitch :family "Roboto Slab" :height 180)
+  (face-remap-add-relative 'variable-pitch :family "Roboto Slab" :height 180 )
   (buffer-face-mode)
   (setq line-spacing 6)
   (setq header-line-format " ")
