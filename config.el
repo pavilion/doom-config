@@ -49,9 +49,10 @@
   )
 
 (setq doom-theme 'my-doom-tomorrow-night)
+(setq doom-font (font-spec :family "Jetbrains Mono" :size 15))
 
-(setq doom-font (font-spec :family "Jetbrains Mono" :size 12))
-(setq display-line-numbers-type 'relative)
+(setq display-line-numbers-type nil)
+
 
 (setq org-agenda-files (list "~/Dropbox/org/work.org"
                              "~/Dropbox/org/life.org"
@@ -77,7 +78,6 @@
   (visual-fill-column-mode 1)
   (writeroom-mode 1))
  (add-hook! nov-mode #'my-nov-font-setup)
-
 
 ;; Assign typescript-mode to .tsx files
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
@@ -113,3 +113,25 @@
     :submode web-mode)))
 
 (mmm-add-mode-ext-class 'typescript-mode nil 'mmm-jsx-mode)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(elfeed-feeds
+   (quote
+    ("https://www.taniarascia.com/rss.xml" "https://humanwhocodes.com/feeds/blog.xml" "2020-06-25" "https://kentcdodds.com/blog/rss.xml" "https://davidwalsh.name/feed" "https://daverupert.com/atom.xml" "https://overreacted.io/rss.xml" "https://christianheilmann.com/feed/" "https://feeds.feedburner.com/2ality" "https://addyosmani.com/rss.xml")))
+ '(pdf-view-midnight-colors (quote ("white" . "black"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(use-package hl-line+
+  :load-path "3rd"
+  :config
+  (hl-line-when-idle-interval 0.3)
+  (toggle-hl-line-when-idle 1))
+
