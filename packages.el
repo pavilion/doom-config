@@ -20,5 +20,6 @@
 (package! graphql-mode)
 
 (package! lsp-ui :disable t)
+(package! org-roam-server)
 
-(package! wordnut)
+(package! hl-line :disable t)

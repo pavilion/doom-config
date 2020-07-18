@@ -2,12 +2,29 @@
 
 ;; Place your private configuration here
 ;;; ~/.doom.d/spacemacs-bindings.el -*- lexical-binding: t; -*-
+;;;
+
+(setq display-line-numbers-type nil)
+
+;; Org journal
+(after! org-journal
+(setq org-journal-dir "~/Dropbox/org/org-roam")
+(setq org-journal-date-prefix "#+TITLE: ")
+(setq org-journal-file-format "%Y-%m-%d.org")
+(setq org-journal-date-format "%A, %d %B %Y")
+(setq org-journal-enable-agenda-integration t))
+
+;;Deft
+(after! deft
+(setq deft-recursive t)
+(setq deft-use-filter-string-for-filename t)
+(setq deft-default-extension "org")
+(setq deft-directory "~/Dropbox/org/org-roam"))
 
 (map!
  ;; Comma for shortcut to local-leader
  :n "," (λ! (push (cons t ?m) unread-command-events)
             (push (cons t 32) unread-command-events))
-
  (:after magit
    (:map with-editor-mode-map
      :desc "Previous comment" "C-k" #'log-edit-previous-comment
@@ -32,7 +49,6 @@
      :desc "New frame (Spacemacs)" :n "F" #'make-frame
      :desc "Next frame (Spacemacs)" :n "o" #'other-frame
      :desc "Delete window (Spacemacs)" :n "d" #'evil-quit
-
      ;; Displaced by other-frame keybinding
      :desc "Window enlargen" :n "O" #'doom/window-enlargen)
    (:prefix "p"
@@ -42,22 +58,37 @@
      )
    ))
 
+
+;; Org Roam
+(setq org-roam-directory "~/Dropbox/org/org-roam")
+(use-package org-roam-server
+  :ensure t
+  :config
+  (setq org-roam-server-host "192.168.1.103"
+        org-roam-server-port 8070
+        org-roam-server-export-inline-images t
+        org-roam-server-authenticate nil
+        org-roam-server-network-poll nil
+        org-roam-server-network-arrows 'nil
+        org-roam-server-network-label-truncate t
+        org-roam-server-network-label-truncate-length 60
+        org-roam-server-network-label-wrap-length 20))
+
+
 (setq doom-theme 'my-doom-tomorrow-night)
-(setq doom-font (font-spec :family "Jetbrains Mono" :size 14))
+(setq doom-font (font-spec :family "Jetbrains Mono" :size 15))
 
-(setq display-line-numbers-type nil)
+(setq org-agenda-files (directory-files-recursively "~/Dropbox/org/org-roam/" "\\.org$"))
 
 
-(setq org-agenda-files (list "~/Dropbox/org/work.org"
-                             "~/Dropbox/org/life.org"
-                             ))
+
+
 
 (setq lsp-enable-symbol-highlighting nil)
 (setq lsp-eldoc-render-all nil)
 (setq lsp-enable-snippet nil)
 (setq lsp-signature-auto-activate nil)
 (setq lsp-ui-sideline-enable nil)
-
 
 ;; Epub
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
@@ -76,10 +107,6 @@
 ;; Assign typescript-mode to .tsx files
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
 
-;; Create submodules for multiple major modes
-(require 'mmm-auto)
-(setq mmm-global-mode 'maybe)
-(setq mmm-submode-decoration-level 0) ;; Turn off background highlight
 
 ;; Add css mode for CSS in JS blocks
 (mmm-add-classes
@@ -122,10 +149,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-;; Better performance using local hl-line
-(use-package hl-line+
-  :load-path "3rd"
-  :config
-  (hl-line-when-idle-interval 0.3)
-  (toggle-hl-line-when-idle 1))
