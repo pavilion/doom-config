@@ -40,16 +40,10 @@
    (:prefix "g"
      :desc "Git status (Spacemacs)" :n "s" #'magit-status
      )
-   (:prefix "m"
-     :desc "Prettify js" :n "=" #'prettier-js
-     )
    ))
 
-(use-package! prettier-js
-  )
-
 (setq doom-theme 'my-doom-tomorrow-night)
-(setq doom-font (font-spec :family "Jetbrains Mono" :size 15))
+(setq doom-font (font-spec :family "Jetbrains Mono" :size 14))
 
 (setq display-line-numbers-type nil)
 
@@ -129,9 +123,9 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; Better performance using local hl-line
 (use-package hl-line+
   :load-path "3rd"
   :config
   (hl-line-when-idle-interval 0.3)
   (toggle-hl-line-when-idle 1))
-
