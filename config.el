@@ -81,8 +81,9 @@
 (setq org-agenda-files (directory-files-recursively "~/Dropbox/org/org-roam/" "\\.org$"))
 
 
-
-
+;; Org elfeed
+(after! elfeed
+  (setq elfeed-search-filter "@1-month-ago +unread"))
 
 (setq lsp-enable-symbol-highlighting nil)
 (setq lsp-eldoc-render-all nil)
@@ -107,6 +108,8 @@
 ;; Assign typescript-mode to .tsx files
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
 
+;;Elfeed
+(setq rmh-elfeed-org-files (list "~/Dropbox/org/org-roam/elfeed.org"))
 
 ;; Add css mode for CSS in JS blocks
 (mmm-add-classes
@@ -139,9 +142,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(elfeed-feeds
-   (quote
-    ("https://www.taniarascia.com/rss.xml" "https://humanwhocodes.com/feeds/blog.xml" "2020-06-25" "https://kentcdodds.com/blog/rss.xml" "https://davidwalsh.name/feed" "https://daverupert.com/atom.xml" "https://overreacted.io/rss.xml" "https://christianheilmann.com/feed/" "https://feeds.feedburner.com/2ality" "https://addyosmani.com/rss.xml")))
  '(pdf-view-midnight-colors (quote ("white" . "black"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
