@@ -1,9 +1,3 @@
-;;; ~/.doom.d/config.el -*- lexical-binding: t; -*-
-
-;; Place your private configuration here
-;;; ~/.doom.d/spacemacs-bindings.el -*- lexical-binding: t; -*-
-;;;
-
 (setq display-line-numbers-type nil)
 
 ;; Org journal
