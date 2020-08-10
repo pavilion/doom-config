@@ -21,5 +21,6 @@
 
 (package! lsp-ui :disable t)
 (package! org-roam-server)
+(package! anki-editor)
 
 (package! hl-line :disable t)

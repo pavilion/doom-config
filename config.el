@@ -70,14 +70,17 @@
 
 
 (setq doom-theme 'my-doom-tomorrow-night)
-(setq doom-font (font-spec :family "Jetbrains Mono" :size 15))
+(setq doom-font (font-spec :family "Jetbrains Mono" :size 14.6))
 
 (setq org-agenda-files (directory-files-recursively "~/Dropbox/org/org-roam/" "\\.org$"))
-
 
 ;; Org elfeed
 (after! elfeed
   (setq elfeed-search-filter "@1-month-ago +unread"))
+
+;; Org-confluence
+(after! ox
+  (require 'ox-confluence))
 
 (setq lsp-enable-symbol-highlighting nil)
 (setq lsp-eldoc-render-all nil)
@@ -143,3 +146,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; Anki!
+(add-hook! 'org-mode-hook
+  (add-hook! 'after-save-hook :local
+    (defun my/push-anki-h ()
+      (when (org-roam--org-roam-file-p)
+        (anki-editor-push-notes)))))
+
+(setq anki-editor-create-decks t)

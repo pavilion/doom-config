@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: anki basic card
+# key: anb
+# condition: t
+# --
+* Idiom                                                        :vocab:idioms:
+  :PROPERTIES:
+  :ANKI_DECK: $1
+  :ANKI_NOTE_TYPE: Basic
+  :ANKI_TAGS: $2
+  :ANKI_NOTE_ID: $3
+  :END:
+** Front
+   $4
+** Back
+   $0
