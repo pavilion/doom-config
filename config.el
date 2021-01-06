@@ -87,6 +87,7 @@
 (setq lsp-enable-snippet nil)
 (setq lsp-signature-auto-activate nil)
 (setq lsp-ui-sideline-enable nil)
+(setq lsp-headerline-breadcrumb-enable nil)
 
 ;; Epub
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
