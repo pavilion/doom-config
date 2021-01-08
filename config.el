@@ -103,38 +103,9 @@
   (writeroom-mode 1))
  (add-hook! nov-mode #'my-nov-font-setup)
 
-;; Assign typescript-mode to .tsx files
-(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
-
 ;;Elfeed
 (setq rmh-elfeed-org-files (list "~/Dropbox/org/org-roam/elfeed.org"))
 
-;; Add css mode for CSS in JS blocks
-(mmm-add-classes
-  '((mmm-styled-mode
-    :submode css-mode
-    :front "[a-pr-zA-PR-Z0-9]?[a-km-zA-KM-Z0-9]+`\n"
-    :back "`;")))
-
-(mmm-add-mode-ext-class 'typescript-mode nil 'mmm-styled-mode)
-
-;; Add submodule for graphql blocks
-(mmm-add-classes
-  '((mmm-graphql-mode
-    :submode graphql-mode
-    :front "gr?a?p?h?ql`\n" ;; Add additional aliases like `gql` if needed
-    :back "`;")))
-
-(mmm-add-mode-ext-class 'typescript-mode nil 'mmm-graphql-mode)
-
-;; Add JSX submodule, because typescript-mode is not that great at it
-(mmm-add-classes
-  '((mmm-jsx-mode
-    :front "\s\([\n<]"
-    :back "[\s>]\);\n"
-    :submode web-mode)))
-
-(mmm-add-mode-ext-class 'typescript-mode nil 'mmm-jsx-mode)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
